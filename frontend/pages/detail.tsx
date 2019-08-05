@@ -17,7 +17,7 @@ const Image = styled.img`
 
 const UserInfomation = styled.div`
   display: grid;
-  grid-template-columns: 1fr 6fr 3fr;
+  grid-template-columns: 50px 6fr 3fr;
   align-items: center;
   justify-content: center;
   margin: 10px 0;
