@@ -1,5 +1,5 @@
-import reset from "styled-reset"
-import { createGlobalStyle } from "styled-components"
+import reset from "styled-reset";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     --iconColor: #222f3e;
     --defaultTextColor: black;
     --sidebarBackgroundColor: #576574;
+    --priceColor: red;
     @media (prefers-color-scheme: dark) {
       --headerBackgroundColor: #ff9f43;
       --mainBackgroundColor: #222f3e;
@@ -19,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
       --iconColor: white;
       --defaultTextColor: white;
       --sidebarBackgroundColor: #576574;
+      --priceColor: orange;
     }  
   }
   * {
@@ -42,6 +44,6 @@ const GlobalStyle = createGlobalStyle`
       outline: none
     }
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

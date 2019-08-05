@@ -1,12 +1,12 @@
-import { InitialState } from "./states"
+import { InitialState } from "./states";
 
 const configureStoreComponent = (() => {
   if (process.env.NODE_ENV === "production") {
-    return require("./configureStore.production")
+    return require("./configureStore.production");
   }
-  return require("./configureStore.development")
-})()
+  return require("./configureStore.development");
+})();
 
 export const configureStore = (initialState = InitialState) => (
   state = initialState
-) => configureStoreComponent.configureStore(state)
+) => configureStoreComponent.configureStore(state);

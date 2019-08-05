@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import Link from "next/link";
 
 const Container = styled.header`
   display: grid;
@@ -8,10 +9,16 @@ const Container = styled.header`
   margin-bottom: 20px;
   align-items: center;
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
-`
+`;
 
 const Header = () => {
-  return <Container>Header</Container>
-}
+  return (
+    <Container>
+      <Link href="/">
+        <a>Header</a>
+      </Link>
+    </Container>
+  );
+};
 
-export default Header
+export default Header;

@@ -1,6 +1,6 @@
-import Header from "./Header"
-import Main from "./Main"
-import Footer from "./Footer"
+import Header from "./Header";
+import Main from "./Main";
+import Footer from "./Footer";
 
 const AppLayout = ({ isFullScreen = false, children }) => {
   return isFullScreen ? (
@@ -13,7 +13,7 @@ const AppLayout = ({ isFullScreen = false, children }) => {
       <Main children={children} />
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default AppLayout
+export default AppLayout;

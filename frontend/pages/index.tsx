@@ -1,5 +1,25 @@
-const Home = () => {
-  return <div>Hi! i'm home</div>
-}
+import styled from "styled-components";
+import ItemCard from "../containers/ItemCard";
 
-export default Home
+const Container = styled.section`
+  display: grid;
+  grid-auto-columns: auto;
+  grid-gap: 10px;
+  padding: 10px;
+`;
+
+const Home = () => {
+  return (
+    <Container>
+      <ItemCard />
+      <ItemCard />
+      <ItemCard />
+      <ItemCard />
+      <ItemCard />
+      <ItemCard />
+      <ItemCard />
+    </Container>
+  );
+};
+
+export default Home;

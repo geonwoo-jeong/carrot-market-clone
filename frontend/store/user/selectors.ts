@@ -1,3 +1,3 @@
-import { IInitialState } from "../states"
+import { IInitialState } from "../states";
 
-export const userSelector = (state: IInitialState) => state.user
+export const userSelector = (state: IInitialState) => state.user;
