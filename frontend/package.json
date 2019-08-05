@@ -1,0 +1,38 @@
+{
+  "name": "carrot-market",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
+    "immer": "^3.2.0",
+    "next": "^9.0.3",
+    "next-redux-wrapper": "^3.0.0-alpha.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4",
+    "redux-saga": "^1.0.5",
+    "styled-components": "^4.3.2",
+    "styled-reset": "^3.0.0",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/next": "^8.0.6",
+    "@types/node": "^12.6.9",
+    "@types/react": "^16.8.24",
+    "@types/react-redux": "^7.1.1",
+    "@types/styled-components": "^4.1.18",
+    "prettier": "^1.18.2",
+    "redux-devtools-extension": "^2.13.8",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-plugin-prettier": "^2.0.1"
+  }
+}
