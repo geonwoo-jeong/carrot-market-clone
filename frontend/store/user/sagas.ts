@@ -1,9 +1,16 @@
-import { all, fork, put, takeLatest } from "redux-saga/effects";
+import { all, delay, fork, put, takeLatest } from "redux-saga/effects";
 import { LOG_IN_REQUEST, LOG_IN_SUCCESS, LOG_IN_FAILURE } from "./types";
+import loginRequestAction from "./actions";
 
-function* login() {
-  console.log("hi");
+// function loginAPI(loginData) {
+//   return fetch("/user/login", loginData);
+// }
+
+function* login(action: ReturnType<typeof loginRequestAction>) {
   try {
+    console.log(action);
+    // const result = yield call(loginAPI, action.payload);
+    yield delay(2000);
     yield put({
       type: LOG_IN_SUCCESS,
     });
