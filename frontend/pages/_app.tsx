@@ -2,7 +2,7 @@ import App, { Container } from "next/app";
 import { Provider } from "react-redux";
 import withRedux from "next-redux-wrapper";
 import { configureStore } from "../store/configureStore";
-import AppLayout from "../components/AppLayout";
+import AppLayout from "../components/templates/AppLayout";
 
 type Props = {
   Component: React.Component;

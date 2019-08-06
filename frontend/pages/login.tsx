@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import SocialButtons from "../containers/SocialButtons";
+// import { useInput } from "../utils/hooks/useInput";
+import InputBox from "../components/molecules/InputBox";
 
 const Container = styled.div`
   display: grid;
-  grid-auto-rows: 1fr;
+  grid-auto-rows: 2fr 5fr 1fr 1fr;
   grid-auto-columns: 1fr;
   grid-gap: 10px;
   justify-content: center;
@@ -13,6 +15,13 @@ const Container = styled.div`
   color: #515a5f;
   background-color: white;
   border-radius: 5px;
+`;
+
+const LoginForm = styled.form`
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-gap: 10px;
 `;
 
 const Title = styled.div`
@@ -42,32 +51,57 @@ const Label = styled.label`
   font-size: 1.2rem;
   text-rendering: optimizeLegibility;
 `;
-const Input = styled.input`
-  width: 100%;
-  margin-top: 10px;
-  border-radius: 5px;
-  height: 2.5rem;
-  background-color: #74b9ff;
-  padding: 10px;
-  font-size: 1.2rem;
-  text-rendering: optimizeLegibility;
-  color: #515a5f;
-  font-weight: 200;
-`;
+// const Input = styled.input`
+//   width: 100%;
+//   margin-top: 10px;
+//   border-radius: 5px;
+//   height: 2.5rem;
+//   background-color: #74b9ff;
+//   padding: 10px;
+//   font-size: 1.2rem;
+//   text-rendering: optimizeLegibility;
+//   color: #515a5f;
+//   font-weight: 200;
+//   transition: all 0.15s ease-in-out;
+// `;
 
 const Login = () => {
+  // const [userId, setUserId] = useInput();
+  // const [userPassword, setUserPassword] = useInput();
+
+  const onSubmitForm = (event: React.SyntheticEvent) => {
+    event.preventDefault();
+    // console.log(userId);
+    // console.log(userPassword);
+  };
+
   return (
     <Container>
       <Title>Log in to Carrot Market</Title>
-      <InputContainer>
-        <Label>Email Address</Label>
-        <Input type="text" />
-      </InputContainer>
-      <InputContainer>
-        <Label>Password</Label>
-        <Input type="password" />
-      </InputContainer>
-      <LoginButton>Log in</LoginButton>
+      <LoginForm onSubmit={onSubmitForm}>
+        <InputBox></InputBox>
+        <InputContainer>
+          <Label htmlFor="user-id">Email Address</Label>
+          {/* <Input
+            name="user-id"
+            type="text"
+            value={userId}
+            onChange={setUserId}
+            required
+          /> */}
+        </InputContainer>
+        <InputContainer>
+          <Label htmlFor="user-password">Password</Label>
+          {/* <Input
+            name="user-password"
+            type="password"
+            value={userPassword}
+            onChange={setUserPassword}
+            required
+          /> */}
+        </InputContainer>
+        <LoginButton type="submit">Log in</LoginButton>
+      </LoginForm>
       <ForgotButton>Forgot Password?</ForgotButton>
       <SocialButtons />
     </Container>

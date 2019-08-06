@@ -1,6 +1,6 @@
-import Header from "./Header";
-import Main from "./Main";
-import Footer from "./Footer";
+import Header from "../../organisms/Header";
+import Main from "../../organisms/Main";
+import Footer from "../../organisms/Footer";
 
 const AppLayout = ({ isFullScreen = false, children }) => {
   return isFullScreen ? (
