@@ -14,7 +14,6 @@ class MyDocument extends Document<Props> {
     const originalRenderPage = ctx.renderPage;
     const sheet = new ServerStyleSheet();
     const initialProps = await Document.getInitialProps(ctx);
-    const pageProps = ctx.store.getState();
     const styleTags = sheet.getStyleElement();
     const helmet = Helmet.renderStatic();
 
@@ -25,7 +24,6 @@ class MyDocument extends Document<Props> {
 
     return {
       ...initialProps,
-      pageProps,
       helmet,
       styles: (
         <>

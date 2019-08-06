@@ -1,11 +1,11 @@
-type User = {
+export type User = {
   email: string;
   firstName: string;
   lastName: string;
   nickName: string;
-  age: number;
-  phoneNumber: string;
-  avatar: string;
+  age?: number;
+  phoneNumber?: string;
+  avatar?: string;
   createdAt: Date;
   updatedAt: Date;
 };

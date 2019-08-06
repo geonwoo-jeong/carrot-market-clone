@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import SocialButtons from "../containers/SocialButtons";
-// import { useInput } from "../utils/hooks/useInput";
-import InputBox from "../components/molecules/InputBox";
+import { useInput } from "../utils/hooks/useInput";
+import { useDispatch } from "react-redux";
+import { loginRequestAction } from "../store/user/actions";
 
 const Container = styled.div`
   display: grid;
@@ -51,54 +52,53 @@ const Label = styled.label`
   font-size: 1.2rem;
   text-rendering: optimizeLegibility;
 `;
-// const Input = styled.input`
-//   width: 100%;
-//   margin-top: 10px;
-//   border-radius: 5px;
-//   height: 2.5rem;
-//   background-color: #74b9ff;
-//   padding: 10px;
-//   font-size: 1.2rem;
-//   text-rendering: optimizeLegibility;
-//   color: #515a5f;
-//   font-weight: 200;
-//   transition: all 0.15s ease-in-out;
-// `;
+const Input = styled.input`
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  height: 2.5rem;
+  background-color: #74b9ff;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-rendering: optimizeLegibility;
+  color: #515a5f;
+  font-weight: 200;
+  transition: all 0.15s ease-in-out;
+`;
 
 const Login = () => {
-  // const [userId, setUserId] = useInput();
-  // const [userPassword, setUserPassword] = useInput();
+  const dispatch = useDispatch();
+  const [userId, setUserId] = useInput();
+  const [userPassword, setUserPassword] = useInput();
 
   const onSubmitForm = (event: React.SyntheticEvent) => {
     event.preventDefault();
-    // console.log(userId);
-    // console.log(userPassword);
+    dispatch(loginRequestAction);
   };
 
   return (
     <Container>
       <Title>Log in to Carrot Market</Title>
       <LoginForm onSubmit={onSubmitForm}>
-        <InputBox></InputBox>
         <InputContainer>
           <Label htmlFor="user-id">Email Address</Label>
-          {/* <Input
+          <Input
             name="user-id"
             type="text"
             value={userId}
             onChange={setUserId}
             required
-          /> */}
+          />
         </InputContainer>
         <InputContainer>
           <Label htmlFor="user-password">Password</Label>
-          {/* <Input
+          <Input
             name="user-password"
             type="password"
             value={userPassword}
             onChange={setUserPassword}
             required
-          /> */}
+          />
         </InputContainer>
         <LoginButton type="submit">Log in</LoginButton>
       </LoginForm>
