@@ -59,7 +59,7 @@ const ItemCard = () => {
   return (
     <Container>
       <Link href="/detail">
-        <StyledLink>
+        <StyledLink href="/detail">
           <Header>
             <ImageContainer>
               <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc8eeBW70megvqxW20BpYwN7BWlu-OC1xdZMqpJHo_3zedNZKe" />

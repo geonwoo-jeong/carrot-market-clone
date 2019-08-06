@@ -1,20 +1,24 @@
 import styled from "styled-components";
+import SocialButtons from "../containers/SocialButtons";
 
 const Container = styled.div`
   display: grid;
-  grid-auto-rows: 2fr 3fr 3fr 3fr 1fr;
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
   grid-gap: 10px;
   justify-content: center;
   align-items: center;
   padding: 4rem;
   width: 50vw;
-  height: 50vh;
-  background-color: orange;
+  color: #515a5f;
+  background-color: white;
+  border-radius: 5px;
 `;
 
 const Title = styled.div`
   text-align: center;
-  font-size: 2rem;
+  align-self: start;
+  font-size: 1.5rem;
   font-weight: 400;
 `;
 const InputContainer = styled.div`
@@ -30,17 +34,25 @@ const LoginButton = styled.button`
   cursor: pointer;
 `;
 const ForgotButton = styled.div`
+  align-self: start;
   margin: 0 auto;
 `;
 
 const Label = styled.label`
   font-size: 1.2rem;
-  font-weight: 600;
+  text-rendering: optimizeLegibility;
 `;
 const Input = styled.input`
   width: 100%;
   margin-top: 10px;
+  border-radius: 5px;
   height: 2.5rem;
+  background-color: #74b9ff;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-rendering: optimizeLegibility;
+  color: #515a5f;
+  font-weight: 200;
 `;
 
 const Login = () => {
@@ -48,15 +60,16 @@ const Login = () => {
     <Container>
       <Title>Log in to Carrot Market</Title>
       <InputContainer>
-        <Label>Something</Label>
+        <Label>Email Address</Label>
         <Input type="text" />
       </InputContainer>
       <InputContainer>
-        <Label>Something</Label>
+        <Label>Password</Label>
         <Input type="password" />
       </InputContainer>
       <LoginButton>Log in</LoginButton>
       <ForgotButton>Forgot Password?</ForgotButton>
+      <SocialButtons />
     </Container>
   );
 };
