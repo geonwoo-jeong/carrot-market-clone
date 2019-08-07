@@ -38,6 +38,7 @@ class MyDocument extends Document<Props> {
     const {
       helmet: { htmlAttributes, bodyAttributes, ...helmet },
     } = this.props;
+
     return (
       <Html {...htmlAttributes}>
         <Head>{Object.values(helmet).map(el => el.toComponent())}</Head>

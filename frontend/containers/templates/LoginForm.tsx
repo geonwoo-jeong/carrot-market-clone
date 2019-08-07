@@ -4,6 +4,8 @@ import useInput from "@utils/hooks/useInput";
 import { useDispatch } from "react-redux";
 import loginRequestAction from "@store/user/actions";
 import { useCallback } from "react";
+import Title from "@components/atoms/Title";
+import Button from "@components/atoms/Button";
 
 const Container = styled.div`
   display: grid;
@@ -26,23 +28,9 @@ const Form = styled.form`
   grid-gap: 10px;
 `;
 
-const Title = styled.div`
-  text-align: center;
-  align-self: start;
-  font-size: 1.5rem;
-  font-weight: 400;
-`;
 const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
-`;
-const LoginButton = styled.button`
-  border-radius: 25px;
-  height: 2.5rem;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 1rem;
-  cursor: pointer;
 `;
 const ForgotButton = styled.div`
   align-self: start;
@@ -101,7 +89,7 @@ const LoginForm = () => {
             required
           />
         </InputContainer>
-        <LoginButton type="submit">Log in</LoginButton>
+        <Button type="submit">Log in</Button>
       </Form>
       <ForgotButton>Forgot Password?</ForgotButton>
       <SocialButtons />

@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+type Props = {
+  type?: "button" | "submit" | "reset";
+  onClick?: (event: React.SyntheticEvent) => void;
+  children: React.ReactNode;
+  disabled?: boolean;
+};
+
 const Wrapper = styled.button`
   border-radius: 25px;
   height: 2.5rem;
@@ -9,6 +16,19 @@ const Wrapper = styled.button`
   cursor: pointer;
 `;
 
-const Button = ({ props }) => <Wrapper {...props} />;
+const Button = (props: Props): React.ReactElement => {
+  const { type, onClick, children, disabled } = props;
+
+  return (
+    <Wrapper type={type} onClick={onClick} disabled={disabled}>
+      {children}
+    </Wrapper>
+  );
+};
+
+Button.defaultType = {
+  type: "button",
+  disabled: false,
+};
 
 export default Button;

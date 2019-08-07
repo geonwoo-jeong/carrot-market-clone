@@ -13,7 +13,6 @@ const InputContainer = styled.div`
 `;
 
 const InputBox = props => {
-  console.log(props);
   return (
     <InputContainer>
       <Label props={props} />
