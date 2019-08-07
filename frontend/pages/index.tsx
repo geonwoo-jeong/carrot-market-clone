@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ItemCard from "../containers/ItemCard";
+import ItemCard from "@components/molecules/ItemCard";
 
 const Container = styled.section`
   display: grid;

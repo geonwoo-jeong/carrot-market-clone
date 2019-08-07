@@ -1,7 +1,11 @@
 import { UserInitialState } from ".";
 import produce from "immer";
-import { UserActionTypes, LOG_IN_REQUEST, LOG_IN_SUCCESS } from "./types";
-import { User } from "./states";
+import {
+  UserActionTypes,
+  LOG_IN_REQUEST,
+  LOG_IN_SUCCESS,
+} from "@store/user/types";
+import { User } from "@store/user/states";
 
 const dummyUser: User = {
   email: "geonwoo.jeong@gmail.com",

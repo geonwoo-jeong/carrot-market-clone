@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 
-export const useInput = (initialValue: any = "") => {
+const useInput = (initialValue: any = "") => {
   const [value, setter] = useState(initialValue);
   const handler = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     const {
@@ -11,3 +11,5 @@ export const useInput = (initialValue: any = "") => {
 
   return [value, handler];
 };
+
+export default useInput;

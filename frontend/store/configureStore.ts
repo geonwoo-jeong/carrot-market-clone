@@ -1,4 +1,4 @@
-import { InitialState } from "./states";
+import { InitialState } from "@store/states";
 
 const configureStoreComponent = (() => {
   if (process.env.NODE_ENV === "production") {

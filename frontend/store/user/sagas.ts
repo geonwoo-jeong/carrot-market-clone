@@ -1,6 +1,10 @@
 import { all, delay, fork, put, takeLatest } from "redux-saga/effects";
-import { LOG_IN_REQUEST, LOG_IN_SUCCESS, LOG_IN_FAILURE } from "./types";
-import loginRequestAction from "./actions";
+import {
+  LOG_IN_REQUEST,
+  LOG_IN_SUCCESS,
+  LOG_IN_FAILURE,
+} from "@store/user/types";
+import loginRequestAction from "@store/user/actions";
 
 // function loginAPI(loginData) {
 //   return fetch("/user/login", loginData);

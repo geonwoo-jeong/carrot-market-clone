@@ -1,6 +1,11 @@
 import styled from "styled-components";
-import LabelComponent from "../atoms/Label";
-import InputComponent from "../atoms/Input";
+import Label from "@components/atoms/Label";
+import Input from "@components/atoms/Input";
+
+// type Props = {
+//   name: string;
+//   placeholder: string;
+// };
 
 const InputContainer = styled.div`
   display: flex;
@@ -11,8 +16,8 @@ const InputBox = props => {
   console.log(props);
   return (
     <InputContainer>
-      <LabelComponent />
-      <InputComponent />
+      <Label props={props} />
+      <Input props={props} />
     </InputContainer>
   );
 };

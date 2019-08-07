@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
-const Label = styled.label`
+const Wrapper = styled.label`
   font-size: 1.2rem;
   text-rendering: optimizeLegibility;
 `;
 
-const LabelComponent = ({ ...props }) => <Label {...props} />;
-
-export default LabelComponent;
+const Label = ({ ...props }) => {
+  console.log(props);
+  return <Wrapper {...props} />;
+};
+export default Label;

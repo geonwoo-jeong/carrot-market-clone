@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import LoginForm from "../components/templates/LogInForm";
+import LoginForm from "@containers/templates/LoginForm";
 import { useSelector } from "react-redux";
-import { userSelector } from "../store/user";
+import { userSelector } from "@store/user";
 import Detail from "./detail";
 
 const Container = styled.div`

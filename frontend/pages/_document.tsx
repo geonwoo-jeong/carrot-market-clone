@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { AppContext } from "../components/AppContext";
+import { AppContext } from "@components/AppContext";
 import { ServerStyleSheet } from "styled-components";
 import GlobalStyle from "../globalStyles";
 import Helmet, { HelmetData } from "react-helmet";

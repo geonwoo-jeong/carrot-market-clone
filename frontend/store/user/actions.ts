@@ -1,4 +1,4 @@
-import { LOG_IN_REQUEST } from "./types";
+import { LOG_IN_REQUEST } from "@store/user/types";
 
 const loginRequestAction = (id: string, password: string) => ({
   type: LOG_IN_REQUEST,

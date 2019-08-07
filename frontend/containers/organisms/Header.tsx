@@ -20,6 +20,9 @@ const Header = () => {
       <Link href="/login">
         <a>Login</a>
       </Link>
+      <Link href="/logout">
+        <a>Logout</a>
+      </Link>
     </Container>
   );
 };

@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Facebook from "../Icons/Facebook";
-import Github from "../Icons/Github";
-import Line from "../Icons/Line";
-import Twitter from "../Icons/Twitter";
+import Facebook from "@Icons/Facebook";
+import Github from "@Icons/Github";
+import Line from "@Icons/Line";
+import Twitter from "@Icons/Twitter";
 
 const Container = styled.div`
   display: flex;

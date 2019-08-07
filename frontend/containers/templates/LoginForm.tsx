@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import SocialButtons from "../../containers/SocialButtons";
-import { useInput } from "../../utils/hooks/useInput";
+import SocialButtons from "@components/molecules/SocialButtons";
+import useInput from "@utils/hooks/useInput";
 import { useDispatch } from "react-redux";
-import loginRequestAction from "../../store/user/actions";
+import loginRequestAction from "@store/user/actions";
 import { useCallback } from "react";
 
 const Container = styled.div`

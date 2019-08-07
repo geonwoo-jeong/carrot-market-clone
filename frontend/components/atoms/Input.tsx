@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Input = styled.input.attrs({
+const Wrapper = styled.input.attrs({
   type: "text",
 })`
   width: 100%;
@@ -16,6 +16,6 @@ const Input = styled.input.attrs({
   transition: all 0.15s ease-in-out;
 `;
 
-const InputComponent = ({ ...props }) => <Input {...props} />;
+const Input = ({ ...props }) => <Wrapper {...props} />;
 
-export default InputComponent;
+export default Input;

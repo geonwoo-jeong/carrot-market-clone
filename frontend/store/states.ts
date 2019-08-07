@@ -1,4 +1,4 @@
-import { IUserState, UserInitialState } from "./user/states";
+import { IUserState, UserInitialState } from "@store/user/states";
 
 export interface IInitialState {
   user: Readonly<IUserState>;
