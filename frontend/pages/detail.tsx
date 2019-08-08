@@ -73,7 +73,7 @@ const UserActions = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 `;
-const Loves = styled.span``;
+const Likes = styled.span``;
 const Chats = styled.span``;
 const Comments = styled.span``;
 const Views = styled.span``;
@@ -98,7 +98,7 @@ const Detail = () => {
         <Price>20,000 Yen</Price>
         <Description>Very Good Ramen</Description>
         <UserActions>
-          <Loves>Loves 22</Loves>
+          <Likes>Likes 22</Likes>
           <Chats>Chats 33</Chats>
           <Comments>Comments 13</Comments>
           <Views>Views 555</Views>

@@ -51,7 +51,7 @@ const UserActions = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 `;
-const Loves = styled.span``;
+const Likes = styled.span``;
 const Chats = styled.span``;
 const Comments = styled.span``;
 
@@ -74,7 +74,7 @@ const ItemCard = () => {
             </LocationAndTime>
             <Price>2,700</Price>
             <UserActions>
-              <Loves>Loves 22</Loves>
+              <Likes>Likes 22</Likes>
               <Chats>Chats 33</Chats>
               <Comments>Comments 13</Comments>
             </UserActions>
