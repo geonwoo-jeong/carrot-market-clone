@@ -14,10 +14,15 @@ const likeReducers = (state = LikeInitialState, action: LikeActionTypes) => {
   return produce(state, draft => {
     switch (action.type) {
       case LIKE_REQUEST:
+        draft.isLiking = false;
+        draft.likeErrorReason = "";
         break;
       case LIKE_SUCCESS:
+        draft.isLiking = true;
+        draft.likeErrorReason = "";
         break;
       case LIKE_FAILURE:
+        draft.isLiking = false;
         break;
       case UNLIKE_REQUEST:
         break;

@@ -29,7 +29,7 @@ interface UnlikeSuccessAction {
 }
 
 interface UnlikeFailureAction {
-  tpye: typeof UNLIKE_FAILURE;
+  type: typeof UNLIKE_FAILURE;
 }
 
 export type LikeActionTypes =
