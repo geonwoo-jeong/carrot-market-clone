@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NextPage } from "next";
 
 const Container = styled.section`
   display: grid;
@@ -78,7 +79,7 @@ const Chats = styled.span``;
 const Comments = styled.span``;
 const Views = styled.span``;
 
-const Detail = () => {
+const Detail: NextPage = () => {
   return (
     <Container>
       <ImageContainer>

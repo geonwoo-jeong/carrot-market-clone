@@ -3,6 +3,7 @@ import LoginForm from "@containers/templates/LoginForm";
 import { useSelector } from "react-redux";
 import { userSelector } from "@store/user";
 import Detail from "./detail";
+import { NextPage } from "next";
 
 const Container = styled.div`
   display: grid;
@@ -18,7 +19,7 @@ const Container = styled.div`
   border-radius: 5px;
 `;
 
-const Login = () => {
+const Login: NextPage = () => {
   const { me } = useSelector(userSelector);
   return <Container>{me ? <Detail /> : <LoginForm />}</Container>;
 };

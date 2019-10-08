@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ItemCard from "@components/molecules/ItemCard";
+import { NextPage } from "next";
 
 const Container = styled.section`
   display: grid;
@@ -8,7 +9,7 @@ const Container = styled.section`
   padding: 10px;
 `;
 
-const Home = () => {
+const Home: NextPage = () => {
   return (
     <Container>
       <ItemCard />

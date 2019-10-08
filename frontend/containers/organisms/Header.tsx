@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import Link from "next/link";
+import { useSelector } from "react-redux";
+import { userSelector } from "@store/user";
+import { Routes } from "@constants/Routes";
 
 const Container = styled.header`
   display: grid;
@@ -11,18 +14,32 @@ const Container = styled.header`
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
 `;
 
+const Left = styled.div``;
+const Middle = styled.div``;
+const Right = styled.div``;
+
 const Header = () => {
+  const { me } = useSelector(userSelector);
+
   return (
     <Container>
-      <Link href="/">
-        <a>Header</a>
-      </Link>
-      <Link href="/login">
-        <a>Login</a>
-      </Link>
-      <Link href="/logout">
-        <a>Logout</a>
-      </Link>
+      <Left>
+        <Link href="/">
+          <a>Logo</a>
+        </Link>
+      </Left>
+      <Middle></Middle>
+      <Right>
+        {me ? (
+          <Link href={Routes.Logout}>
+            <a>Logout</a>
+          </Link>
+        ) : (
+          <Link href={Routes.Login}>
+            <a>Login</a>
+          </Link>
+        )}
+      </Right>
     </Container>
   );
 };

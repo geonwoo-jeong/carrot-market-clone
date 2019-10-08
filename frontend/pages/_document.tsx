@@ -1,5 +1,10 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import { AppContext } from "@components/AppContext";
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import GlobalStyle from "../globalStyles";
 import Helmet, { HelmetData } from "react-helmet";
@@ -10,7 +15,7 @@ type Props = {
 };
 
 class MyDocument extends Document<Props> {
-  static getInitialProps = async (ctx: AppContext): Promise<any> => {
+  static getInitialProps = async (ctx: DocumentContext): Promise<any> => {
     const originalRenderPage = ctx.renderPage;
     const sheet = new ServerStyleSheet();
     const initialProps = await Document.getInitialProps(ctx);
